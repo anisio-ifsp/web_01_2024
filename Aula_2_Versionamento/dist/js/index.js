@@ -48,6 +48,8 @@ user = {
     contato: { email: "anisio.silva@ifsp.com.br", telefone: "1636248810" }
 };
 console.log("Dados do Tipo Usuário: ", user);
+console.log("Contato do user: ", user.contato);
+console.log(typeof (user), typeof (usuario), user instanceof Object);
 /*
 
 Exercício:
@@ -59,7 +61,11 @@ Precisamos armazenar informações sobre diferentes produtos disponíveis na loj
     nomeProduto: do tipo string, representando o nome de um produto.
     preco: do tipo number, representando o preço do produto.
     disponivel: do tipo boolean, representando se o produto está disponível em estoque ou não.
-
+*/
+let nomeProduto;
+let preco;
+let disponivel;
+/*
 
 02 - Crie um objeto produto com as seguintes propriedades:
 
@@ -70,4 +76,13 @@ Precisamos armazenar informações sobre diferentes produtos disponíveis na loj
     Em seguida, imprima todas as variáveis e propriedades do objeto produto usando console.log.
 
 */
-console.log("olá");
+let produto;
+produto = {
+    nome: "geladeira",
+    preco: 1500.98,
+    estoque: 2,
+    categorias: ["linha branca"]
+};
+let product;
+product = ["Nome", 122, 2, ["teste"]];
+console.log(produto, product);

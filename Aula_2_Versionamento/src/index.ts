@@ -12,10 +12,7 @@ Vamos criar variáveis e objetos para representar diferentes tipos de dados rela
 
 */
 
-let nomeCompleto: string;
-let idade: number;
-let email: string;
-let isAtivo: boolean;
+
 
 
 /*
@@ -31,47 +28,7 @@ let isAtivo: boolean;
     Em seguida, imprima todas as variáveis e propriedades do objeto usuario usando console.log.
 
 */
-let usuario : {
-    nome: string,
-    sobrenome: string,
-    idade: number, 
-    contato: {email: string, telefone: string}    
-};
-usuario = {
-    nome:"Anisio",
-    sobrenome: "Silva",
-    idade: 23,
-    contato: {
-        email:"anisio.silva@ifsp.com.br",
-        telefone:"1636248810"
-    }
-};
 
-console.log("Dados do objeto usuário: ",usuario);
-
-type Contato = {
-    email: string, 
-    telefone: string
-};
-
-type Pessoa = {
-    nome: string,
-    sobrenome: string,
-    idade: number,
-    contato: Contato 
-};
-
-let user : Pessoa;
-
-user = {
-    nome:"Anisio",
-    sobrenome: "Silva",
-    idade: 23,
-    contato: {email:"anisio.silva@ifsp.com.br",telefone:"1636248810"}
-};
-
-console.log("Dados do Tipo Usuário: ",user);
-console.log("Contato do user: ",user.contato);
 
 /*
 
@@ -86,9 +43,7 @@ Precisamos armazenar informações sobre diferentes produtos disponíveis na loj
     disponivel: do tipo boolean, representando se o produto está disponível em estoque ou não.
 */
 
-let nomeProduto: string;
-let preco: number;
-let disponivel: boolean;
+
 
 /*
 
@@ -101,24 +56,3 @@ let disponivel: boolean;
     Em seguida, imprima todas as variáveis e propriedades do objeto produto usando console.log.
 
 */
-
-let produto:{
-    nome:string,
-    preco: number,
-    estoque: number,
-    categorias: string[]
-}
-
-produto ={
-    nome:"geladeira",
-    preco: 1500.98,
-    estoque: 2,
-    categorias: ["linha branca"]
-}
-
-let product : [string,number,number,string[]]
-
-product = ["Nome",122,2,["teste"]];
-
-
-console.log(produto, product)
