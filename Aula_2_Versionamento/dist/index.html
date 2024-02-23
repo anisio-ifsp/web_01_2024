@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 02</title>
+    <script src="js/index.js" defer></script>
+
 </head>
 <body>
     <h1>Questionário - Para exemplos utilize o console do browser</h1>
@@ -12,6 +14,31 @@
     <h2>02 - Quais são algumas das características-chave dos arrays em TypeScript e como eles diferem dos arrays em JavaScript puro? Além disso, você poderia fornecer exemplos de como usar arrays em TypeScript para lidar com diferentes tipos de dados?</h2>
     <h3>Resposta: </h3>
     <h2>03 - Quais são as principais características e benefícios de usar objetos em TypeScript em comparação com JavaScript puro? Além disso, como você pode definir e trabalhar com objetos em TypeScript de uma maneira que aproveite ao máximo o sistema de tipos estáticos?</h3>
-    <h3>Resposta: </h3>  
+    <h3>Resposta: </h3> 
+    
+    <h1>Respostas sobre atribuição em TypeScript</h1>
+    <h2>Pergunta 1: Qual é a diferença entre atribuição por anotação e por inferência de tipos em TypeScript?</h2>
+    <p>A diferença entre atribuição por anotação e por inferência de tipos em TypeScript está na forma como o tipo de uma variável é determinado.</p>
+
+    <h2>Pergunta 2: O que é atribuição por anotação? Dê um exemplo.</h2>
+    <p>Atribuição por anotação é quando o desenvolvedor explicitamente declara o tipo da variável. Isso é feito adicionando dois pontos (:) após o nome da variável, seguido pelo tipo desejado. Por exemplo: <code>let numero: number = 10;</code></p>
+
+    <h2>Pergunta 3: O que é inferência de tipos? Dê um exemplo.</h2>
+    <p>Inferência de tipos é quando o TypeScript automaticamente infere o tipo da variável com base no valor atribuído a ela. Por exemplo: <code>let texto = "Olá, mundo!";</code></p>
+
+    <h2>Pergunta 4: Em quais situações é mais apropriado usar a atribuição por anotação?</h2>
+    <ul>
+        <li>Quando se deseja fornecer uma documentação clara e explícita sobre o tipo da variável.</li>
+        <li>Em situações onde o valor inicial pode não ser representativo do tipo que será utilizado posteriormente.</li>
+        <li>Para evitar inferências indesejadas quando o tipo é ambíguo.</li>
+        <li>Em funções onde é importante especificar o tipo dos parâmetros e do retorno.</li>
+    </ul>
+
+    <h2>Pergunta 5: Em quais situações é mais apropriado usar a inferência de tipos?</h2>
+    <ul>
+        <li>Em situações onde o tipo é óbvio a partir do valor atribuído à variável.</li>
+        <li>Para escrever código de forma mais concisa e legível, sem a necessidade de declarações explícitas de tipo.</li>
+        <li>Ao trabalhar com funções que retornam valores complexos e cujos tipos podem ser inferidos a partir do retorno.</li>
+    </ul>
 </body>
 </html>

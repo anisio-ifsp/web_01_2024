@@ -1,7 +1,8 @@
+"use strict";
 /*
 
 Exercício:
-Considere um sistema de cadastro de usuários onde precisamos armazenar informações sobre os usuários. 
+Considere um sistema de cadastro de usuários onde precisamos armazenar informações sobre os usuários.
 Vamos criar variáveis e objetos para representar diferentes tipos de dados relacionados a um usuário.
 
 1- Crie as seguintes variáveis primitivas:
@@ -11,13 +12,10 @@ Vamos criar variáveis e objetos para representar diferentes tipos de dados rela
     isAtivo: do tipo boolean, representando se o usuário está ativo ou não.
 
 */
-
-let nomeCompleto: string;
-let idade: number;
-let email: string;
-let isAtivo: boolean;
-
-
+let nomeCompleto;
+let idade;
+let email;
+let isAtivo;
 /*
 
 2 -Crie um objeto usuario com as seguintes propriedades:
@@ -31,52 +29,29 @@ let isAtivo: boolean;
     Em seguida, imprima todas as variáveis e propriedades do objeto usuario usando console.log.
 
 */
-let usuario : {
-    nome: string,
-    sobrenome: string,
-    idade: number, 
-    contato: {email: string, telefone: string}    
-};
+let usuario;
 usuario = {
-    nome:"Anisio",
+    nome: "Anisio",
     sobrenome: "Silva",
     idade: 23,
     contato: {
-        email:"anisio.silva@ifsp.com.br",
-        telefone:"1636248810"
+        email: "anisio.silva@ifsp.com.br",
+        telefone: "1636248810"
     }
 };
-
-console.log("Dados do objeto usuário: ",usuario);
-
-type Contato = {
-    email: string, 
-    telefone: string
-};
-
-type Pessoa = {
-    nome: string,
-    sobrenome: string,
-    idade: number,
-    contato: Contato 
-};
-
-let user : Pessoa;
-
+console.log("Dados do objeto usuário: ", usuario);
+let user;
 user = {
-    nome:"Anisio",
+    nome: "Anisio",
     sobrenome: "Silva",
     idade: 23,
-    contato: {email:"anisio.silva@ifsp.com.br",telefone:"1636248810"}
+    contato: { email: "anisio.silva@ifsp.com.br", telefone: "1636248810" }
 };
-
-console.log("Dados do Tipo Usuário: ",user);
-console.log("Contato do user: ",user.contato);
-
+console.log("Dados do Tipo Usuário: ", user);
 /*
 
 Exercício:
-Vamos criar um sistema de gestão de produtos para uma loja online. 
+Vamos criar um sistema de gestão de produtos para uma loja online.
 Precisamos armazenar informações sobre diferentes produtos disponíveis na loja. Vamos criar variáveis e objetos para representar esses produtos.
 
 01 - Crie as seguintes variáveis primitivas:
@@ -84,13 +59,7 @@ Precisamos armazenar informações sobre diferentes produtos disponíveis na loj
     nomeProduto: do tipo string, representando o nome de um produto.
     preco: do tipo number, representando o preço do produto.
     disponivel: do tipo boolean, representando se o produto está disponível em estoque ou não.
-*/
 
-let nomeProduto: string;
-let preco: number;
-let disponivel: boolean;
-
-/*
 
 02 - Crie um objeto produto com as seguintes propriedades:
 
@@ -101,24 +70,4 @@ let disponivel: boolean;
     Em seguida, imprima todas as variáveis e propriedades do objeto produto usando console.log.
 
 */
-
-let produto:{
-    nome:string,
-    preco: number,
-    estoque: number,
-    categorias: string[]
-}
-
-produto ={
-    nome:"geladeira",
-    preco: 1500.98,
-    estoque: 2,
-    categorias: ["linha branca"]
-}
-
-let product : [string,number,number,string[]]
-
-product = ["Nome",122,2,["teste"]];
-
-
-console.log(produto, product)
+console.log("olá");

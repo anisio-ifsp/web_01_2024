@@ -2,6 +2,7 @@
 // Tipo number para números
 let idade = 25;
 let altura = 1.75;
+console.log(idade);
 // Tipo string para texto
 let nome = "João";
 let sobrenome = 'Silva';
