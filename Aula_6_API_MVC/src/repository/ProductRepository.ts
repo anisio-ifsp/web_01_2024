@@ -3,7 +3,7 @@ import { Product } from "../model/Product";
 export class ProductRepository{
     productList: Product[] = [];
 
-    inseriProduto(product: Product){
+    insereProduto(product: Product){
         this.productList.push(product);
     }
 

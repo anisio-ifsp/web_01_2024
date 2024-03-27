@@ -10,7 +10,7 @@ export class ProductService{
             throw new Error("Informações incompletas");
         }
         const novoProduto = new Product(name, description, price);
-        this.productRepository.inseriProduto(novoProduto);
+        this.productRepository.insereProduto(novoProduto);
         return novoProduto;
     }
 
