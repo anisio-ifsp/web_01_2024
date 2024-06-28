@@ -9,8 +9,15 @@ export class ProductRepository{
     }
 
     createTable() {
+        const query = `
+        CREATE TABLE Vendas.Product (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            price DECIMAL(10,2) NOT NULL
+        )`;
+
         try {
-            const resultado = executarComandoSQL("CREATE TABLE Vendas.Product (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255) NOT NULL, price DECIMAL(10,2) NOT NULL)", [],this.imprimeResult);
+            const resultado = executarComandoSQL(query, [],this.imprimeResult);
             console.log('Query executada com sucesso:', resultado);
         } catch (err) {
             console.error('Erro ao executar a query:', err);
@@ -18,10 +25,11 @@ export class ProductRepository{
     }
 
     insertProduct(name: string, price: number) {
+        const query = `
+        INSERT INTO vendas.Product (name, price) VALUES (?, ?)`;
+
         try {
-            const resultado = executarComandoSQL(
-                "INSERT INTO vendas.Product (name, price) VALUES (?, ?)",
-                [name, price], this.imprimeResult
+            const resultado = executarComandoSQL(query, [name, price], this.imprimeResult
             );
             console.log('Produto inserido com sucesso:', resultado);
         } catch (err) {
