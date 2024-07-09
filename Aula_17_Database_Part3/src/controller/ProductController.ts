@@ -1,12 +1,11 @@
 import { Request, Response } from "express";
 import { ProductService } from "../service/ProductService";
 
-
 const productService = new ProductService();
 
-export function cadastrarProduto (req: Request, res: Response){
+export async function cadastrarProduto (req: Request, res: Response){
     try {
-        const novoProduto = productService.cadastrarProduto(req.body);
+        const novoProduto = await productService.cadastrarProduto(req.body);
         res.status(201).json(
             {
                 mensagem:"Produto adicionado com sucesso!",

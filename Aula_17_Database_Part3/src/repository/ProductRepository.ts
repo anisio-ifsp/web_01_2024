@@ -3,7 +3,11 @@ import { Product } from "../model/Product";
 
 export class ProductRepository{
 
-    async createTable() {
+    constructor(){
+        this.createTable();
+    }
+
+    private async createTable() {
         const query = `
         CREATE TABLE IF NOT EXISTS Vendas.Product (
             id INT AUTO_INCREMENT PRIMARY KEY,

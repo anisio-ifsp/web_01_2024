@@ -5,13 +5,13 @@ export class ProductService{
 
     productRepository: ProductRepository = new ProductRepository();
 
-    cadastrarProduto(produtoData: any): Product {
+    async cadastrarProduto(produtoData: any): Promise<Product> {
         const { name, price } = produtoData;
         if(!name || !price ){
             throw new Error("Informações incompletas");
         }
 
-        const novoProduto = this.productRepository.insertProduct(name, price);
+        const novoProduto =  await this.productRepository.insertProduct(name, price);
         console.log("Service ", novoProduto);
         return novoProduto;
     }
