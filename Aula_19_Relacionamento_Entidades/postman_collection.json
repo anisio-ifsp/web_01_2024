@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "b1bd1e03-dfaa-4b37-afa4-3dbe75498978",
+		"name": "Bank Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33645413"
+	},
+	"item": [
+		{
+			"name": "tipo-conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\":\"Poupança\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/tipoConta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"tipoConta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"saldo\": 100,\r\n    \"tipoConta\": 1721587227557\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/conta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tipo-conta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"descricao\": \"poupança\",\r\n    \"codigoTipoConta\": 1721587227557\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/tipoConta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"tipoConta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"saldo\": 50,\r\n    \"numeroConta\": \"C1721588562352\",\r\n    \"tipoConta\": 1721589918012\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/conta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tipo-conta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"descricao\": \"poupança\",\r\n    \"codigoTipoConta\": 1721587227557\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/tipoConta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"tipoConta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"numeroConta\": \"C1721590275844\",\r\n    \"saldo\": \"100.00\",\r\n    \"tipoConta\": 1721587227557\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bank}}/conta",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tipo-conta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bank}}/tipoConta?descricao=poupança",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"tipoConta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "codigoTipoConta",
+							"value": "1721589918012",
+							"disabled": true
+						},
+						{
+							"key": "descricao",
+							"value": "poupança"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bank}}/conta?tipoConta=1721587227557",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"conta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "numeroConta",
+							"value": "C1721591064957",
+							"disabled": true
+						},
+						{
+							"key": "tipoConta",
+							"value": "1721587227557"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tipos-conta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bank}}/tipoConta/all",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"tipoConta",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bank}}/conta/all",
+					"host": [
+						"{{bank}}"
+					],
+					"path": [
+						"conta",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
