@@ -14,13 +14,15 @@ export class TipoContaService{
             throw new Error("Informações incompletas ou incorretas");
         }
 
-        const result: TipoConta[] = await this.tipoContaRepository.getTipoContaPorDescricaoOuCodigoOuId(descricao)
+        const descricaoFormatada:string =  String(descricao).toLocaleLowerCase();
+
+        const result: TipoConta[] = await this.tipoContaRepository.getTipoContaPorDescricaoOuCodigoOuId(descricaoFormatada)
 
         if(result.length > 0){
             throw new Error("Descrição já cadastrada.");
         }
 
-        return this.tipoContaRepository.insereTipoConta(new TipoConta(0,descricao));
+        return this.tipoContaRepository.insereTipoConta(new TipoConta(0,descricaoFormatada));
     }
 
     async atualizaTipoConta(tipoConta: TipoConta):Promise<TipoConta>{
