@@ -1,0 +1,6 @@
+{
+    "watch": ["src"],
+    "ext": "ts",
+    "exec": "npm-run-all --parallel dev restart-server"
+}
+  
