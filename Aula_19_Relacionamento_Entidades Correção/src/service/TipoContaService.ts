@@ -9,13 +9,12 @@ export class TipoContaService{
     tipoContaRepository = new TipoContaRepository();
 
     async criaTipoConta(descricaoData: any):Promise<TipoConta>{
-        if (descricaoData == undefined) {
-            throw new Error("A descrição deve ser informada.");
+        const {descricao} = descricaoData;
+        if (descricao == undefined) {
+            throw new Error("Informações incompletas ou incorretas");
         }
 
-        const descricao:string = String(descricaoData).toLocaleLowerCase();
-
-        const result: TipoConta[] = await this.tipoContaRepository.getTipoContaPorDescricaoOuCodigoOuId(descricao);
+        const result: TipoConta[] = await this.tipoContaRepository.getTipoContaPorDescricaoOuCodigoOuId(descricao)
 
         if(result.length > 0){
             throw new Error("Descrição já cadastrada.");
